@@ -1,0 +1,903 @@
+/*TIPOGRAFÍA*/
+
+@font-face {
+  font-family: 'titillium_bdbold';
+  src: url('../css/titillium-bold-webfont.woff2') format('woff2'),
+    url('../css/titillium-bold-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'titilliumregular';
+  src: url('../css/titillium-regular-webfont.woff2') format('woff2'),
+    url('../css/titillium-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'repsolregular';
+  src: url('repsol-regular-webfont-webfont.woff2') format('woff2'),
+    url('repsol-regular-webfont-webfont.woff') format('woff');
+  font-weight: 100;
+  font-style: normal;
+}
+
+/*GENERAL*/
+
+* {
+  font-family: 'titilliumregular';
+  margin: 0;
+  padding: 0;
+  max-width: 700px;
+  box-sizing: border-box;
+  font-weight: 100;
+  outline: 0 !important;
+  transform: translateZ(0);
+}
+
+body {
+  position: relative;
+  max-width: 700px;
+}
+
+section {
+  position: relative;
+  width: 100%;
+  max-width: 700px;
+  min-height: 600px;
+  position: absolute;
+  left: 0;
+  overflow: hidden;
+}
+
+section > img {
+  display: none;
+}
+
+#contenedor {
+  max-width: 100%;
+  min-height: 670px;
+
+  background-color: #f2f3f3;
+}
+
+#animaciones {
+  position: absolute;
+  width: 700px;
+  height: 600px;
+}
+
+#capablanca {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.6);
+  z-index: 100;
+  display: none;
+}
+
+/*TITULARES*/
+
+/*H1*/
+#h1-container {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  width: 350px;
+  height: 50px;
+  top: 20px;
+  right: 10px;
+  z-index: 10;
+}
+
+h1 {
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 21px;
+  color: #fa8400;
+  text-align: left;
+  right: 5%;
+  margin-left: 10px;
+}
+
+#h1-plus {
+  width: 20px;
+  height: 20px;
+  background-image: url('../images/plus.png');
+  background-position: top left;
+  background-size: 20px;
+}
+
+h2 {
+  font-family: 'Titillium Web', sans-serif;
+  position: absolute;
+  font-size: 19px;
+  color: #fa8400;
+  top: 30px;
+  text-align: left;
+  left: 5%;
+}
+
+h3 {
+  font-size: 20px;
+  color: #fe8200;
+  font-family: 'titillium_bdbold';
+  text-decoration: none;
+  font-weight: 100;
+  line-height: 25px;
+  margin-bottom: 6px;
+  width: calc(100% - 40px);
+}
+
+h4 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  color: #00809a;
+  line-height: 1.3;
+}
+
+/*Ilustracion/Animacion 700*/
+
+#fondo {
+  position: absolute;
+}
+
+#temp {
+  position: absolute;
+  width: 140px;
+  left: 30px;
+  top: 157px;
+}
+
+#bdatos {
+  position: absolute;
+  width: 105px;
+  left: 53px;
+  bottom: 25px;
+}
+
+#cable {
+  position: absolute;
+  width: 62px;
+  height: 422px;
+  left: 35px;
+  bottom: 65px;
+}
+
+#mujer {
+  position: absolute;
+  width: 106px;
+  right: 173px;
+  bottom: 180px;
+}
+
+#ojo {
+  position: absolute;
+  background-color: rgb(77, 77, 77);
+  width: 2px;
+  height: 2px;
+  border-radius: 50%;
+
+  right: 243px;
+  top: 158px;
+
+  -webkit-animation: aniOjo 5s infinite;
+  /* Safari 4+ */
+  -moz-animation: aniOjo 5s infinite;
+  /* Fx 5+ */
+  -o-animation: aniOjoa 5s infinite;
+  /* Opera 12+ */
+  animation: aniOjo 5s infinite;
+  /* IE 10+, Fx 29+ */
+}
+
+@keyframes aniOjo {
+  0% {
+    opacity: 1;
+  }
+
+  20% {
+    opacity: 1;
+  }
+
+  21% {
+    opacity: 0;
+  }
+
+  23% {
+    opacity: 1;
+  }
+
+  80% {
+    opacity: 1;
+  }
+
+  82% {
+    opacity: 0;
+  }
+
+  83% {
+    opacity: 1;
+  }
+
+  85% {
+    opacity: 1;
+  }
+
+  86% {
+    opacity: 0;
+  }
+
+  87% {
+    opacity: 0;
+  }
+}
+
+#camara {
+  position: absolute;
+  width: 83px;
+  left: 55px;
+  top: 100px;
+
+  -webkit-animation: aniCamara 7s infinite;
+  /* Safari 4+ */
+  -moz-animation: aniCamara 7s infinite;
+  /* Fx 5+ */
+  -o-animation: aniCamara 7s infinite;
+  /* Opera 12+ */
+  animation: aniCamara 7s infinite;
+  /* IE 10+, Fx 29+ */
+}
+
+@keyframes aniCamara {
+  0% {
+    transform: rotate(0deg);
+    transform-origin: left;
+  }
+
+  25% {
+    transform: rotate(10deg);
+    transform-origin: left;
+  }
+
+  40% {
+    transform: rotate(10deg);
+    transform-origin: left;
+  }
+
+  55% {
+    transform: rotate(6deg);
+    transform-origin: left;
+  }
+
+  65% {
+    transform: rotate(6deg);
+    transform-origin: left;
+  }
+
+  75% {
+    transform: rotate(10deg);
+    transform-origin: left;
+  }
+
+  100% {
+    transform: rotate(0deg);
+    transform-origin: left;
+  }
+}
+
+#nube01 {
+  position: absolute;
+  width: 255px;
+  right: 247px;
+  bottom: 380px;
+  -webkit-animation: aniNube 10s ease-in-out infinite;
+  /* Safari 4+ */
+  -moz-animation: aniNube 10s ease-in-out infinite;
+  /* Fx 5+ */
+  -o-animation: aniNube 10s ease-in-out infinite;
+  /* Opera 12+ */
+  animation: aniNube 10s ease-in-out infinite;
+  /* IE 10+, Fx 29+ */
+}
+
+@keyframes aniNube {
+  0% {
+    transform: translate(0px, 0px) scale(1, 1);
+  }
+
+  50% {
+    transform: translate(18px, 0px) scale(1.01, 1);
+  }
+
+  100% {
+    transform: translate(0px, 0px) scale(1, 1);
+  }
+}
+
+#nube02 {
+  position: absolute;
+  width: 182px;
+  right: -37px;
+  bottom: 414px;
+  -webkit-animation: aniNube2 10s ease-in-out infinite;
+  /* Safari 4+ */
+  -moz-animation: aniNube2 10s ease-in-out infinite;
+  /* Fx 5+ */
+  -o-animation: aniNube2 10s ease-in-out infinite;
+  /* Opera 12+ */
+  animation: aniNube2 10s ease-in-out infinite;
+  /* IE 10+, Fx 29+ */
+}
+
+@keyframes aniNube2 {
+  0% {
+    transform: translate(0px, 0px) scale(1, 1);
+  }
+
+  50% {
+    transform: translate(-16px, 0px) scale(1, 0.9);
+  }
+
+  100% {
+    transform: translate(0px, 0px) scale(1, 1);
+  }
+}
+
+#torno {
+  position: absolute;
+  width: 108px;
+  right: 318px;
+  bottom: 230px;
+
+  clip-path: inset(10px 10px 0px 0px);
+
+  -webkit-animation: torno 5s 5s ease-in-out infinite;
+  /* Safari 4+ */
+  -moz-animation: torno 5s 5s ease-in-out infinite;
+  /* Fx 5+ */
+  -o-animation: torno 5s 5s ease-in-out infinite;
+  /* Opera 12+ */
+  animation: torno 5s 5s ease-in-out infinite;
+  /* IE 10+, Fx 29+ */
+}
+
+@keyframes torno {
+  0% {
+    transform: rotate(0deg);
+    transform-origin: center;
+  }
+
+  10% {
+    transform: rotate(-53deg);
+    transform-origin: center;
+  }
+
+  12% {
+    transform: rotate(-45deg);
+    transform-origin: center;
+  }
+
+  100% {
+    transform: rotate(-45deg);
+    transform-origin: center;
+  }
+}
+
+#control {
+  position: absolute;
+  width: 344px;
+  right: 148px;
+  bottom: 178px;
+}
+
+#pared {
+  position: absolute;
+  width: 300px;
+  left: 95px;
+  bottom: 255px;
+}
+
+#edificios {
+  position: absolute;
+  width: 306px;
+  right: 0px;
+  bottom: 255px;
+}
+
+#arboles {
+  position: absolute;
+  width: 112px;
+  left: 116px;
+  bottom: 257px;
+}
+
+/*VENTANAS*/
+
+.ventana {
+  position: relative;
+  top: 150px;
+  width: 80%;
+  height: auto;
+  margin: auto;
+
+  background-color: #fff;
+  z-index: 300;
+  padding: 30px;
+  border: 2px solid #00809a;
+  border-radius: 10px;
+
+  transform: scale(0, 0);
+  transition: all 0.5s ease-in-out;
+}
+
+.popup {
+  transform: scale(1, 1);
+}
+
+.cerrar {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  width: 24px;
+  height: 24px;
+  background-image: url('../images/cerrar.png');
+  background-position: top left;
+  background-size: 24px;
+  z-index: 4;
+}
+
+.cerrar:hover {
+  background-position: bottom left;
+  cursor: pointer;
+}
+
+.ventana ul {
+  margin-top: 5px;
+  list-style: none;
+  text-decoration-style: none;
+}
+
+.ventana ul li {
+  font-family: 'Roboto', sans-serif;
+  font-size: 12px;
+  color: #6e6259;
+  margin-left: 5px;
+  line-height: 20px;
+}
+
+.ventana p,
+.hide-cam p,
+.hide-temp p,
+.hide-control p {
+  color: #6e6259;
+  font-size: 12px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.hide-bdatos p {
+  color: #6e6259;
+  font-size: 12px;
+  font-family: 'Roboto', sans-serif;
+  margin-top: 5px;
+}
+
+/*BOTONES*/
+
+#botones {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+}
+
+.plus {
+  position: absolute;
+  right: 12px;
+  width: 20px;
+  height: 20px;
+  background-image: url('../images/plus.png');
+  background-position: top left;
+  background-size: 20px;
+}
+
+.plus:hover,
+#h1-plus:hover,
+#camara-plus:hover,
+#temperatura-plus:hover,
+#bdatos-plus:hover,
+#control-plus:hover {
+  background-position: bottom left;
+  cursor: pointer;
+}
+
+/*Botones Hover 700*/
+#camara-plus,
+#temperatura-plus,
+#bdatos-plus,
+#control-plus {
+  width: 20px;
+  height: 20px;
+  background-image: url('../images/plus.png');
+  background-position: top left;
+  background-size: 20px;
+}
+
+#camara-plus {
+  position: absolute;
+  top: 80px;
+  left: 120px;
+  z-index: 1;
+}
+
+#temperatura-plus {
+  position: absolute;
+  top: 200px;
+  left: 60px;
+  z-index: 1;
+}
+
+#bdatos-plus {
+  position: absolute;
+  bottom: 167px;
+  left: 70px;
+  z-index: 200;
+}
+
+#control-plus {
+  position: absolute;
+  bottom: 345px;
+  left: 394px;
+  z-index: 200;
+}
+
+.hide-cam,
+.hide-temp,
+.hide-bdatos,
+.hide-control {
+  display: none;
+}
+
+#camara-plus:hover + .hide-cam {
+  display: block;
+  position: absolute;
+  top: 62px;
+  left: 108px;
+  width: auto;
+  height: auto;
+  margin: auto;
+  background-color: rgba(255, 255, 255, 0.7);
+  z-index: 0;
+  padding: 10px 20px 10px 45px;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.21);
+  -moz-box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.21);
+  box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.21);
+}
+
+#temperatura-plus:hover + .hide-temp {
+  display: block;
+  position: absolute;
+  top: 183px;
+  left: 48px;
+  width: auto;
+  height: auto;
+  margin: auto;
+  background-color: rgba(255, 255, 255, 0.8);
+  z-index: 0;
+  padding: 10px 20px 10px 45px;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.21);
+  -moz-box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.21);
+  box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.21);
+}
+
+#bdatos-plus:hover + .hide-bdatos {
+  display: block;
+  position: absolute;
+  bottom: 160px;
+  left: 58px;
+  width: 140px;
+  height: auto;
+  margin: auto;
+  background-color: rgba(255, 255, 255, 0.8);
+  z-index: 100;
+  padding: 20px 20px 40px 20px;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.21);
+  -moz-box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.21);
+  box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.21);
+}
+
+#control-plus:hover + .hide-control {
+  display: block;
+  position: absolute;
+  bottom: 329px;
+  left: 382px;
+  width: auto;
+  height: auto;
+  margin: auto;
+  background-color: rgba(255, 255, 255, 0.9);
+  z-index: 100;
+  padding: 10px 20px 10px 45px;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.21);
+  -moz-box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.21);
+  box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.21);
+}
+
+/*BOTONES LISTA JS 700/360*/
+
+#botones-plus {
+  left: 30%;
+  width: calc(90% - 180px);
+  position: absolute;
+  top: calc(100% - 32%);
+}
+
+.boton {
+  transition: margin-left 0.3s;
+  margin-bottom: 12px;
+  position: relative;
+  /*border: 3px solid #00859b;*/
+  background-color: #fff;
+  border-radius: 4px;
+  -webkit-box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.21);
+  -moz-box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.21);
+  box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.21);
+  text-align: left;
+
+  display: flex;
+  align-items: center;
+}
+
+.boton a {
+  font-size: 14px;
+  color: #464646;
+  font-family: 'titilliumregular';
+  text-decoration: none;
+  font-weight: 100;
+  line-height: 18px;
+  width: 88%;
+  padding: 12px 40px 12px 15px;
+}
+
+.boton:hover {
+  transition: margin-left 0.3s;
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+.boton a:hover {
+  cursor: pointer;
+}
+
+.plus {
+  position: absolute;
+  right: 12px;
+  width: 20px;
+  height: 20px;
+  background-image: url('../images/plus.png');
+  background-position: top left;
+  background-size: 20px;
+}
+
+/*********** MEDIA QUERIES***********/
+
+@media screen and (max-width: 600px) {
+  /*GENERAL*/
+
+  * {
+    transition: all 0.5s ease-in-out;
+  }
+
+  body {
+    min-width: 320px;
+  }
+
+  section {
+    position: relative;
+    width: 100%;
+    background-size: contain;
+    background-color: #f3f2f2;
+  }
+
+  section > img {
+    display: block;
+    width: 100%;
+  }
+
+  #animaciones > img,
+  #camara-plus,
+  #temperatura-plus,
+  #bdatos-plus,
+  #control-plus {
+    display: none;
+  }
+
+  #fondo {
+    position: relative;
+    margin-top: 0;
+  }
+
+  /*H1*/
+
+  #h1-container {
+    z-index: 2;
+  }
+
+  #h1-plus:hover {
+    background-position: top left;
+  }
+
+  /*Botones JS 600/360*/
+
+  #camara-plus_b {
+    position: absolute;
+    top: 11%;
+    left: 20%;
+    z-index: 1;
+  }
+
+  #temperatura-plus_b {
+    position: absolute;
+    top: 200px;
+    left: 60px;
+    z-index: 1;
+  }
+
+  #bdatos-plus_b {
+    position: absolute;
+    top: 63%;
+    left: 56%;
+    z-index: 1;
+  }
+
+  #control-plus_b {
+    position: absolute;
+    top: 40%;
+    left: 63%;
+    z-index: 1;
+  }
+
+  #camara-plus_b,
+  #bdatos-plus_b,
+  #control-plus_b {
+    width: 20px;
+    height: 20px;
+    background-image: url('../images/plus.png');
+    background-position: top left;
+    background-size: 20px;
+  }
+
+  /*BOTONES LISTA JS 700/360*/
+  #botones {
+    position: relative;
+    margin-top: 0%;
+  }
+  #botones-plus {
+    left: 5%;
+    bottom: 0;
+    width: 90%;
+    position: relative;
+  }
+
+  .boton {
+    transition: margin-left 0.3s;
+    margin-bottom: 12px;
+    position: relative;
+
+    background-color: #fff;
+    border-radius: 4px;
+    -webkit-box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.21);
+    -moz-box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.21);
+    box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.21);
+    text-align: left;
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+
+  .boton a {
+    font-size: 15px;
+    width: 100%;
+  }
+
+  /*VENTANAS*/
+  .ventana {
+    position: absolute;
+    width: 90%;
+    left: 5%;
+    z-index: 100;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  /*H1*/
+
+  #h1-container {
+    top: 20px;
+    right: 0;
+    width: 250px;
+    display: inline-block;
+  }
+
+  #h1-plus {
+    width: 20px;
+    height: 20px;
+    background-image: url(../images/plus.png);
+    background-position: top left;
+    background-size: 20px;
+    display: inline-block;
+    float: left;
+    margin-top: 5px;
+  }
+
+  h1 {
+    font-size: 21px;
+    line-height: 23px;
+    right: 0;
+    margin-left: 30px;
+  }
+
+  /*Botones JS*/
+
+  #camara-plus_b {
+    top: 10%;
+    left: 24%;
+  }
+
+  #bdatos-plus_b {
+    top: 56%;
+    left: 56%;
+  }
+
+  #control-plus_b {
+    top: 37%;
+    left: 62%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  /*Botones JS*/
+
+  #bdatos-plus_b {
+    top: 47%;
+    left: 56%;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  /*H1*/
+
+  #h1-container {
+    width: 225px;
+  }
+
+  h1 {
+    font-size: 18px;
+    line-height: 20px;
+    right: 0;
+    margin-left: 30px;
+  }
+
+  /*Botones JS*/
+
+  #camara-plus_b {
+    top: 8%;
+    left: 24%;
+  }
+
+  #bdatos-plus_b {
+    top: 42%;
+    left: 56%;
+  }
+
+  #control-plus_b {
+    top: 30%;
+    left: 62%;
+  }
+}
